@@ -1,0 +1,48 @@
+<?php
+// This is a hearder area
+?>
+<!DOCTYPE html>
+<html lang="<?php language_attributes(); ?>">
+<head>
+    <meta charset="<?php bloginfo('Charset'); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php the_title(); ?></title>
+    <?php wp_head(); ?>
+</head>
+<body <?php body_class(); ?>>
+
+    <header id="header">
+        <div class="top_header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12"><p><?php echo get_theme_mod('top_header_text_setting'); ?></p></div>
+                </div>
+            </div>
+        </div>
+        <div id="header_area">
+            <div class="container">
+                <div class="row  <?php echo get_theme_mod('nurani_menu_position_setting'); ?>" id="menu_logo_area">   
+                    <div class="col-md-3 logo_col">
+                        <?php 
+                        $logo_link = esc_url(home_url('/'));
+                        $logo_url = get_theme_mod('nurani_logo_setting');
+                        $default_logo = get_template_directory_uri() . '/img/image.png';
+                        ?>
+                        <a href="<?php echo $logo_link; ?>" rel="home">
+                            <img src="<?php echo $logo_url ? $logo_url : $default_logo; ?>" alt="Logo">
+                        </a>
+                    </div>
+                    <div class="col-md-9 menu_col">
+                        <?php
+                        wp_nav_menu([
+                            'theme_location' => 'main-menu',
+                            'menu_id'        => 'nav',
+                            'container'      => false,
+                            'fallback_cb'    => false,
+                        ]);
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
