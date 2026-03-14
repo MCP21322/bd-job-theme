@@ -1,6 +1,27 @@
-<div class="footer_area">
+<?php
+/**
+ * widget and footer here
+ */
+?>
 
-    <section class="copy-write">
+<footer id="footer_area">
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <?php dynamic_sidebar('footer_id_1') ?>
+                </div>
+                <div class="col-md-4">
+                   <?php dynamic_sidebar('footer_id_2') ?>
+                </div>
+                <div class="col-md-4">
+                   
+                    <a href="contact_form1">  <?php dynamic_sidebar('footer_id_3') ?></a>
+                </div>
+            </div> 
+        </div>
+    </section>
+    <section id="copy-write">
         <div class="container">
            <div class="row">
                <div class="col-md-12">
@@ -9,4 +30,8 @@
             </div>
         </div>
     </section>
-</div>
+</footer>
+
+<?php wp_footer(); ?>
+</body>
+</html>

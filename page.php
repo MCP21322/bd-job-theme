@@ -11,10 +11,12 @@ get_header(); ?>
                    <?php get_template_part('templet_part/post_setup'); ?>
                 </div>
                 <div class="col-md-3">
-                    <p>This is site ber area</p>
-                    <?php if(is_active_sidebar('widget_id_1')) : ?>
+                    <?php if(is_active_sidebar('main_sidebar_1')) : ?>
                         <div id="secandary" class="widget_area">
-                            <?php dynamic_sidebar('widget_id_1');  ?>
+                              <?php // when open the contact us page then hidden the sidebar?>
+                            <?php if ( ! is_page('contact') ) : ?>
+                                <?php dynamic_sidebar('main_sidebar_1');  ?>
+                            <?php endif; ?>
                         </div>
                     <?php endif; ?>    
                 </div>

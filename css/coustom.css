@@ -1,0 +1,363 @@
+:root{
+    --primary-color: #003049;
+    --scendary-color: #219ebc;
+    --footer-text-color: white;
+    --black-color:black;
+    --text-color: black;
+    --white-color: #ffffff;
+    --font-size: 25px;
+}
+
+*, *::before *::after{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/*widget area none css*/
+div#secandary {
+    display: none;
+}
+
+
+/*excerpt read more button style start*/
+a.read_more {
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+/*excerpt read more button style end*/
+
+/*========top header css start hera=========*/
+#header .top_header{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 20px 0px;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/*========top header css end hera=========*/
+
+/*========logo area css=========*/
+div#menu_logo_area {
+    /* display: inline-block; */
+    margin-top: 15px;
+     display: flex;
+    align-items: center; /* লোগো ও মেনু লম্বালম্বিভাবে মাঝখানে থাকবে */
+    justify-content: space-between;
+}
+#menu_logo_area img {
+    display: block !important;
+    width: 100px !important;
+    max-width: 250px; 
+    height: auto !important;
+}
+/*========logo area css end hear=========*/
+/*========header ara nav css start here=========*/
+
+div#nav_area {
+    margin-left: 442px;
+}
+#nav {
+    list-style: none;
+    margin: -58px 109px;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    margin: 23px 0px;
+}
+
+#nav li {
+    position: relative; 
+    padding: 10px 15px;
+}
+
+#nav li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--text-color, #333);
+    font-size: var(--font-size, 16px);
+    transition: 0.3s;
+}
+
+#nav li a:hover {
+    color: var(--scendary-color, #007bff);
+}
+
+
+#nav ul#dropdown-menu, 
+#nav .sub-menu {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    min-width: 200px;
+    background: #ffffff;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: none; 
+    z-index: 999;
+}
+
+
+#nav ul li {
+    display: block;
+    width: 125%;
+    padding: 5px 20px;
+}
+
+#nav li:hover > ul#dropdown-menu,
+#nav li:hover > .sub-menu {
+    display: block;
+}
+
+#nav ul ul {
+    left: 100% !important;
+    top: 0 !important;
+}
+/*========header ara nav css end here=========*/
+/*========menu position css start here=========*/
+
+.left_menu .logo_col {
+    order: 2; 
+}
+
+.left_menu .menu_col {
+    order: 1; 
+}
+
+
+.right_menu .logo_col {
+    order: 1;
+}
+
+.right_menu .menu_col {
+    order: 2;
+}
+.left_menu #nav {
+    list-style: none;
+    margin: -58px 109px;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    margin: -29px 1px;
+}
+.left_menu .logo_col img {
+    margin-left: 155px;
+}
+
+.center_menu .logo_col {
+    width: 100%; 
+}
+
+.center_menu .menu_col {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+/*========menu position css end here=========*/
+
+/*Footer area css here*/
+section#copy-write {
+    overflow: hidden;
+    background: var(--black-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+section.footer {
+    background: #000000e0;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+}
+
+section.footer li{
+    list-style: none;
+}
+section.footer li a{
+    text-decoration: none;
+ 
+}
+
+section.footer li a:hover{
+   transition: 0.5s;
+   background-color: var(--white-color);
+ 
+}
+
+
+/*Footer area css end here*/
+
+/*post thumbnail style start*/
+
+.noorani_post_thumbnail img {
+    height: 300px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/*post thumbnail style end*/
+
+/*pagination styele stard*/
+.custom-pagination {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.nav-links {
+    display: inline-flex;
+    gap: 10px;
+    list-style: none;
+}
+
+.page-numbers {
+    padding: 8px 15px;
+    background: #f1f1f1;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.page-numbers:hover {
+    background: #0073aa;
+    color: #fff;
+}
+
+/* বর্তমান পেজের স্টাইল */
+.page-numbers.current {
+    background: #0073aa;
+    color: #fff;
+    cursor: default;
+}
+
+/*pagination styele end*/
+
+/*single post widget style start here*/
+div#secondary input {
+    border: 2px solid black;
+    box-shadow: 1px 1px 2px;
+    width: 161px;
+   padding: 10px 10px;
+}
+div#secondary button {
+    background: red;
+    margin-left: 10px;
+    padding: 10px 15px;
+}
+/*single post widget style end here*/
+
+/* widget style start here*/
+div#secondary label {
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+div#secondary input {
+    border: 2px solid black;
+    box-shadow: 1px 1px 2px;
+}
+div#secondary button {
+    background-color: red;
+    border-radius: 6px;
+    color: white;
+    font-size: 18px;
+}
+div#secondary button {
+    background: red;
+}
+div#secondary button:hover {
+    color: white;
+    background-color: black;
+    transition: .5s;
+ 
+}
+div#secondary input:focus {
+    outline: none;
+    border: 2px solid #343fdb; 
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+
+}
+
+/* widget style end here*/
+
+/*contact us page style start here*/
+
+.post_details_area label {
+    display: flex;
+}
+.post_details_area input {
+    margin-left: 153px;
+    justify-content: center;
+}
+.post_details_area h2 {
+    margin-bottom: 25px;
+}
+.post_details_area textarea {
+    margin-left: 52px;
+}
+/*contact us page style end here*/
+
+/*sign up pop up page style start here*/
+/* পপআপ ব্যাকগ্রাউন্ড (লুকানো থাকবে) */
+.modal {
+  display: block; 
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); /* কালো আবছা ভাব */
+}
+
+/* পপআপ বক্সের ডিজাইন */
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  width: 400px;
+  border-radius: 8px;
+  position: relative;
+}
+
+/* বন্ধ করার বাটন (Close Button) */
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+/*sign up pop up page style end here*/
+
+/*sign out button style start here*/
+#sign_up_form button {
+    margin-left: 788px;
+    background: red;
+    border-radius: 9px;
+    padding: 0px 15px;
+    font-size: 20px;
+    text-align: center;
+}
+#sign_up_form button a {
+    text-decoration: none;
+    color: white;
+    
+}
+#sign_up_form button:hover {
+   color: white;
+   background-color: black;
+   transition: 0.5s;
+}
+
+/*sign out button style end here*/

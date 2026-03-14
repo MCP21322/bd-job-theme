@@ -16,6 +16,23 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12"><p><?php echo get_theme_mod('top_header_text_setting'); ?></p></div>
+                    <!-- sign up HTML here start -->
+                    <div id="sign_up_form">
+                        <!-- লগিন আবস্তায় লগ আউট বাটন দেখাবে --> 
+                        <?php if(is_user_logged_in()) : ?>
+                            <button><a href="<?php echo wp_logout_url( home_url() ); ?>" class="btn-logout">Log out</a></button>
+                        <?php else : ?>
+                        <button id="signupBtn" class="btn-signup">Sign Up</button>
+                        <div id="signupModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close-btn">&times;</span>
+                                <h2>Create an Account</h2>
+                                <?php echo do_shortcode('[custom_signup]'); ?>
+                            </div>
+                        </div>
+                        <?php endif; ?>
+                    </div>
+                    <!-- sign up HTML end here -->
                 </div>
             </div>
         </div>
