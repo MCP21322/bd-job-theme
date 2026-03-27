@@ -1,6 +1,6 @@
 <?php 
 /*
-job post archive templete here
+ custom post type noorani job post archive templete here
 */
 ?>
 <?php get_header(); ?>
@@ -11,10 +11,10 @@ job post archive templete here
     <div class="container">
         <div class="row">
             <div class="col-md-9">
-                    <h1>All Job Circulars</h1>
-                    <div class="job-list-grid">
-                        <?php get_template_part('templet_part/job_post') ?>
-                    </div>
+                <h1>এখানে নুরানি ও হাফেজি মাদ্রাসার সকল চকরি পাবেন</h1>
+                <div class="job-list-grid">
+                    <?php get_template_part('templet_part/job_post'); ?>
+                </div>
             </div>
             <div class="col-md-3">
                 <?php //sidebar area ?>

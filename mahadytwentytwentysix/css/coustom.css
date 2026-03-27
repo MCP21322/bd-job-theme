@@ -15,16 +15,11 @@
     box-sizing: border-box;
 }
 
-/*widget area none css*/
-div#secandary {
-    display: none;
-}
-
-
 /*excerpt read more button style start*/
 a.read_more {
     margin-left: 10px;
     text-decoration: none;
+    display: none;
 }
 
 /*excerpt read more button style end*/
@@ -247,42 +242,23 @@ section.footer li a:hover{
 /*pagination styele end*/
 
 /*single post widget style start here*/
-div#secondary input {
-    border: 2px solid black;
-    box-shadow: 1px 1px 2px;
-    width: 161px;
-   padding: 10px 10px;
-}
-div#secondary button {
-    background: red;
-    margin-left: 10px;
-    padding: 10px 15px;
-}
-/*single post widget style end here*/
-
 /* widget style start here*/
-div#secondary label {
-    margin-bottom: 5px;
-    font-size: 25px;
-}
 div#secondary input {
-    border: 2px solid black;
-    box-shadow: 1px 1px 2px;
+    padding: 0px 0px;
 }
 div#secondary button {
-    background-color: red;
-    border-radius: 6px;
+    background-color: green;
     color: white;
-    font-size: 18px;
+    border-radius: 4px;
 }
-div#secondary button {
-    background: red;
+div#secandary label {
+    color: green;
+    font-size: 16px;
 }
 div#secondary button:hover {
-    color: white;
     background-color: black;
-    transition: .5s;
- 
+    color: white;
+    transition: 0.5s;
 }
 div#secondary input:focus {
     outline: none;
@@ -292,9 +268,78 @@ div#secondary input:focus {
 }
 
 /* widget style end here*/
+/*hme page wiged area design start*/
+div#secandary button {
+    background-color: green;
+    border-radius: 3px;
+    margin-left: 10px;
+    border: none;
+    color: white;
+}
+div#secandary input {
+    width: 54%;
+}
+div#secondary label {
+    color: green;
+    font-size: 16px;
+}
+
+div#secandary button:hover {
+    background-color: black;
+    transition: 0.5s;
+}
+
+/*hme page wiged area design end*/
+
+
+/*single post wiget design start*/
+input#wp-block-search__input-1 {
+    width: 50%;
+}
+button.wp-block-search__button.wp-element-button {
+    margin-left: 10px;
+}
+/*single post wiget design end*/
+
+/* footer widget style start*/
+
+section#block-14 ul li a img, svg {
+    width: 36px;
+    height: 34px;
+}
+section.footer li {
+    list-style: none;
+    background: darkcyan;
+    margin-left: 13px;
+}
+section.footer li a {
+    list-style: none;
+    background: green;
+    list-style: none;
+    color: white;
+}
+section#block-14 ul li a:hover {
+    background: none !important;
+}
+section#block-14 ul li:hover {
+    border-radius: 50% !important;
+    transition: 0.5s;
+}
+
+li.wp-social-link.wp-social-link-facebook.wp-block-social-link {
+    display: block;
+    display: flex;
+    background: green;
+    width: fit-content;
+    margin-left: -3px;
+}
+ul.wp-block-social-links.is-layout-flex.wp-block-social-links-is-layout-flex {
+    display: flex;
+}
+/* footer widget style end*/
+
 
 /*contact us page style start here*/
-
 .post_details_area label {
     display: flex;
 }
@@ -503,9 +548,6 @@ div#blog_area {
 form.signup-modal-form {
     display: inline-grid;
     margin-top: 0px;
-}
-input {
-    margin-top: 19px;
 }
 
 /* animaton */
@@ -793,3 +835,59 @@ input#noorani_job_submit:hover {
     margin-left: 15px;
 }
 /* user avartar profile syle end */
+
+/*comments area style start */
+p.comment-form-url {
+    display: none;
+}
+input#submit {
+    border: none;
+    background: green;
+    color: white;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.comments_area {
+    margin-top: 90px;
+}
+h3#reply-title {
+    color: green;
+    font-size: 26px;
+}
+input#submit:hover {
+    background: black;
+    transition: 0.5s;
+}
+/*comments area style end */
+
+
+/* blog post style strat here  */
+.blog-card {
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+.blog-thumb img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+.pagination span, .pagination a {
+    padding: 8px 16px;
+    margin: 0 4px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #007bff;
+    text-decoration: none;
+}
+.pagination .current {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+/* blog post style end here  */
+
+

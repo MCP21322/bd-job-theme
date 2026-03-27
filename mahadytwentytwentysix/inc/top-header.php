@@ -1,6 +1,6 @@
 <?php
 
-// top header customize
+// top header customize all function
 
 function top_header_customize($wp_customize){
     // top header text customize code

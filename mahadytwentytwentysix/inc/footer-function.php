@@ -1,5 +1,5 @@
 <?php
-
+//footer customaize function here
 function footer_section_cutomize_function($wp_customize){
     $wp_customize -> add_section('nurani_footer_section',[
         'title' => __('Footer option', 'nurani-job-bd'),

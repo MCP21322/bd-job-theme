@@ -13,7 +13,6 @@
             <?php the_content(); ?>
     </div>
 </div>
-
 <?php
 endwhile;
 else:

@@ -1,4 +1,5 @@
 <?php
+// defualt function here
 
 // Title function
 add_theme_support('title-tag');
@@ -10,7 +11,7 @@ ob_start();
 
 // Excerpt length function
 function custom_excerpt_length($length){
-    return 40;
+    return 10;
 }
 add_filter('excerpt_length','custom_excerpt_length',9999);
 

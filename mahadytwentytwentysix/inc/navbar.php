@@ -1,5 +1,5 @@
 <?php
-
+//navbar settion manazmant functon here
 
 function nurani_nav_customize($wp_customize){
     // logo section customize function

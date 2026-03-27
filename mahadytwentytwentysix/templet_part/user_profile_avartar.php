@@ -13,7 +13,7 @@
 
 ?>
 <div class="user_profile_wrapper">
-    <a href="<?php echo esc_html( home_url('/post_job/') ); ?>" class='profile_btn'>
+    <a href="<?php echo esc_html( home_url('/job-post/') ); ?>" class='profile_btn'>
         <?php // user profile blank or not  ?>
         <?php if(strpos($user_avatar, 'mysteryman' ) !== false || strpos($user_avatar, 'blank') !== false  ): ?>
             <span class='profile-letter'><?php echo esc_html( $user_first_letter ); ?></span> 

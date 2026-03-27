@@ -66,7 +66,7 @@ add_action('init', 'handle_custom_signup');
         //যদি কোনো ভুল না হয় (error না থাকে)
         if(!is_wp_error($user_id)){
             wp_set_auth_cookie($user_id);
-            wp_redirect(home_url('/post_job/'));
+            wp_redirect(home_url('/job-post/'));
             exit;
         }else{
             error_log( $user_id->get_error_message());

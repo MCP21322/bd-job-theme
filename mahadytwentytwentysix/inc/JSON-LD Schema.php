@@ -3,11 +3,11 @@
  * নূরানী মাদ্রাসা জবের জন্য অটোমেটিক JSON-LD Schema জেনারেট করা
  */
 function add_job_schema_to_head() {
-    // শুধুমাত্র সিঙ্গেল জব পোস্ট পেজে এটি রান করবে
+    // run only for sigle post 
     if ( is_singular('job') ) {
         global $post;
 
-        // ডেটাগুলো মেটা ফিল্ড থেকে নিয়ে আসা
+        // get data from mata field
         $job_id      = $post->ID;
         $title       = esc_attr($post->post_title);
         $description = wp_strip_all_tags($post->post_content);

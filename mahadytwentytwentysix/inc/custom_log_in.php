@@ -13,7 +13,7 @@ function custom_login_form_shortcode(){
     // form setting here
    $args = array(
         'echo'           => false,
-        'redirect'       => home_url('/post_job/'), 
+        'redirect'       => home_url('/job-post/'), 
         'form_id'        => 'custom-login-form',
         'label_username' => '', 
         'label_password' => '', 

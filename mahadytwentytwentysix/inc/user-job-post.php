@@ -25,7 +25,7 @@ add_shortcode( 'user_job_post', 'user_job_post_shortcode' );
 
 
 add_action('init', 'usr_job_post_handler');
-// ফর্ম সাবমিট হ্যান্ডেল করা
+// handle user form submition 
 function usr_job_post_handler(){
   if(isset($_POST['submit_job']) && is_user_logged_in()){
     $job_title = sanitize_text_field($_POST['job_title']);
@@ -35,7 +35,7 @@ function usr_job_post_handler(){
     $phone_number = sanitize_text_field($_POST['phone_number']);
     
 
-    // নতুন পোস্ট তৈরি করা
+    // make new post
     $new_job = array(
         'post_title' => $job_title,
         'job_location' => $job_location,
@@ -49,12 +49,12 @@ function usr_job_post_handler(){
     $post_id = wp_insert_post($new_job);
 
     if($post_id){
-        //কোম্পানির নাম এবং লোকেশন মেটা ডেটা হিসেবে সেভ করা
+        //mata data and companey name store
         update_post_meta( $post_id, 'company_name', sanitize_text_field($_POST['company_name']) );
         update_post_meta( $post_id, 'job_location', sanitize_text_field($_POST['job_location']) );
 
-        // সফল হলে রিডাইরেক্ট
-        wp_redirect(add_query_arg('job_success', '1', home_url('/post_job/')));
+        // redirect if success
+        wp_redirect(add_query_arg('job_success', '1', home_url('/job-post/')));
         exit;
     };
 

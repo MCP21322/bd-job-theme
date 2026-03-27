@@ -39,17 +39,20 @@ include_once('inc/custom_signup.php');
 //custom log in short code here
 include_once('inc/custom_log_in.php');
 
-//custom-post-queries.php function
-include_once('inc/custom_post_queries.php');
-
 //user job post  short code function
 include_once('inc/user-job-post.php');
 
 // post show on home page shortcode function
-include_once('inc/post_show_home_shortcorde.php');
+include_once('inc/post_show_front_page_shortcorde.php');
+
+//post show on all job page short code function
+include_once('inc/noorani_all_job_post_custom_design.php');
 
 /// JSON-LD Schema function here
 include_once('inc/JSON-LD Schema.php');
+
+//custom blog post type functon here
+include_once('inc/bd-noorani-custom-blog-post-type.php');
 
 
 
