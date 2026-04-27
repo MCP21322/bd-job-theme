@@ -15,7 +15,6 @@
                    <?php dynamic_sidebar('footer_id_2') ?>
                 </div>
                 <div class="col-md-4">
-                   
                     <a href="contact_form1">  <?php dynamic_sidebar('footer_id_3') ?></a>
                 </div>
             </div> 

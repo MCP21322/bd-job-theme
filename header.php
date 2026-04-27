@@ -1,6 +1,7 @@
 <?php
 // This is a hearder area
 ?>
+
 <!DOCTYPE html>
 <html lang="<?php language_attributes(); ?>">
 <head>
@@ -16,25 +17,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12"><p><?php echo get_theme_mod('top_header_text_setting'); ?></p></div>
-                    <!-- sign up HTML here start -->
-                    <div id="sign_up_form">
-                        <!-- লগিন আবস্তায় লগ আউট বাটন দেখাবে --> 
-                        <?php if(is_user_logged_in()) : ?>
-                            <button><a href="<?php echo wp_logout_url( home_url() ); ?>" class="btn-logout">Log out</a></button>
-                        <?php else : ?>
-                        <button id="signupBtn" class="btn-signup">Sign Up</button>
-                        <div id="signupModal" class="modal">
-                            <div class="modal-content">
-                                <span class="close-btn">&times;</span>
-                                <h2>Create an Account</h2>
-                                <?php echo do_shortcode('[custom_signup]'); ?>
-                            </div>
-                        </div>
-                        <?php endif; ?>
-                    </div>
-                    <!-- sign up HTML end here -->
                 </div>
             </div>
+        </div>
+        <div class="container">
+            <?php //বর্তমান টেমপ্লেট ফাইল চেক কর হয়েছে   ?>
+            <?php 
+            if ( is_user_logged_in() && current_user_can( 'manage_options' ) ) {
+                global $template;
+                echo '<div style="background:black; color:white; padding:10px;">বর্তমান টেমপ্লেট ফাইল: ' . basename($template) . '</div>';
+            }
+            ?>
         </div>
         <div id="header_area">
             <div class="container">
@@ -49,7 +42,7 @@
                             <img src="<?php echo $logo_url ? $logo_url : $default_logo; ?>" alt="Logo">
                         </a>
                     </div>
-                    <div class="col-md-9 menu_col">
+                    <div class="col-md-6 menu_col">
                         <?php
                         wp_nav_menu([
                             'theme_location' => 'main-menu',
@@ -58,6 +51,14 @@
                             'fallback_cb'    => false,
                         ]);
                         ?>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="sign_up_template">
+                            <?php get_template_part('templet_part/sign_up'); ?>
+                        </div>
+                        <div class="log_in_template">
+                            <?php get_template_part('templet_part/log_in'); ?>
+                        </div>
                     </div>
                 </div>
             </div>

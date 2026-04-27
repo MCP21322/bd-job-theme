@@ -6,6 +6,9 @@ get_header(); ?>
 
     <section id="body_area">
         <div class="container">
+            <?php //user page, post and widget traker function 
+            get_template_part('templet_part/page_breadcrumb');
+            ?>
             <div class="row">
                 <div class="col-md-9" id="colum-9">
                    <?php get_template_part('templet_part/post_setup'); ?>
